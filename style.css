@@ -1,38 +1,89 @@
-body{
-  background-color: #0a0a23;
+/* Pico CSS Reset */
+:root {
+  --font-size: 25px;
+  --primary-color: #c5222a;
+  --secondary-color: #2d54d5;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #2e7d89;
+  --light-color: #90a67d;
+  --dark-color: #1a1b1c;
+  --bg-color: #444f59;
+  --text-color: #212529;
+  --font-family: 'Trattatello', 'fantasy';
 }
-#text{
-  background-color: #0a0a23;
-  color: #ffffff;
-  padding: 10px;
+
+html {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
-#game{
-  max-width:500px;
-  max-height: 400px;
-  background-color: #ffffff;
-  color: #ffffff;
-  margin: 30px auto 0px;
-  padding: 10px;
+
+body {
+  margin: 0;
+  padding: 0;
 }
-#controls,#stats{
-  border: 1px solid #0a0a23;
-  color: #0a0a23;
-  padding: 5px;  
+
+#game {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgb(220, 205, 192);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
 }
-#monsterStats{
-  display: none;
-  border: 1px solid #0a0a23;
-  padding: 5px;
-  background-color: #c70d0d;
-  color: #ffffff;
+
+#stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
 }
-.stat{
-  padding-right: 10px;
+
+.stat {
+  font-size: 1.2rem;
+  color: var(--primary-color);
 }
-button{
+
+#controls {
+  margin: 20px 0;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
-  color: #0a0a23;
-  background-color: #feac32;
-  background-image: linear-gradient(#fecc4c, #ffac33);
-  border: 3px solid #feac32;
+  margin: 10px;
+  font-family: var(--rem);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+#monsterStats {
+  display: none;
+  margin-top: 20px;
+}
+
+#monsterStats .stat {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+#text {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--light-color);
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
